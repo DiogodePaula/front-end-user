@@ -13,7 +13,6 @@ class User {
         this.id = 0;
         this.btnRegisterUser = document.getElementById('btnRegister');
         this.btnUpdateUser = document.getElementById('updateUser');
-        this.btnEditarUser = document.getElementById('btn-warning')
         this.getUsers();
         this.events();
         this.updateUser();
@@ -101,7 +100,7 @@ class User {
         `;
     }
 
-    userValidate(event, route) {
+    userValidate(event) {
         event.preventDefault();
         if (this.name.value && this.email.value && this.age.value && this.phone.value) {
             const user = {
@@ -142,7 +141,7 @@ class User {
             name: this.nameModal.value,
             email: this.emailModal.value,
             age: this.ageModal.value,
-            phone: this.phoneModal. value
+            phone: this.phoneModal.value
         }
 
         axios.put(`http://localhost:3000/users/${id}`, user)
