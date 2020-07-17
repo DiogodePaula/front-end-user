@@ -1,0 +1,28 @@
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.navbar{
+    background: linear-gradient(to right, rgb(71, 199, 231) , #01f1dd, #12b4e6);
+}
+
+#usersBoard{
+    background: linear-gradient(to right, rgb(71, 199, 231) , #12b4e6, #01f1dd);
+}
+
+#card-dinamic{
+    border: solid 2px black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+input{
+    border: solid 1px black !important;
+}
+
+form{
+    background: linear-gradient(to right, #01f1dd, rgb(71, 199, 231) , #12b4e6);
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 1px black;
+} 
