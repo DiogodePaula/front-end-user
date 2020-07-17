@@ -6,7 +6,6 @@ class User {
         this.email = document.getElementById('txtEmail');
         this.age = document.getElementById('txtAge');
         this.phone = document.getElementById('txtPhone');
-        
         this.nameModal = document.getElementById('update-name');
         this.ageModal = document.getElementById('update-age');
         this.emailModal = document.getElementById('update-email');
@@ -56,7 +55,7 @@ class User {
         })
        
     }
-    //SALVAR  O ID EM ALGUM LUGAR E UTILIZAR ELE PARA ATUALIZAR
+    
     deleteUser(id) {
         axios.delete(`http://localhost:3000/users/${id}`) 
             .then(response => {
@@ -70,8 +69,6 @@ class User {
     getUser(id) {
         axios.get(`http://localhost:3000/users/${id}`)
             .then(response => {
-                console.log(response.data.user[0]);
-                
                 this.id = id;
                 this.nameModal.value = response.data.user[0].name;
                 this.ageModal.value = response.data.user[0].age;
@@ -127,10 +124,6 @@ class User {
         document.getElementById('usersBoard').innerHTML += html;
 
     }
-
-    
-
-    
 
     createUser(user) {
         axios.post(`http://localhost:3000/users`, user)
